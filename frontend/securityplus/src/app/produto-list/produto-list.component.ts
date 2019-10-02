@@ -13,7 +13,6 @@ export class ProdutoListComponent implements OnInit {
     descricao: '',
     fabricante: null,
     classificacao: null
-    
   };
 
   ngOnInit() {
