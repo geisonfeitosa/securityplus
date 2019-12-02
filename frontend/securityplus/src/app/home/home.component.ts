@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../services/produto.service';
 import { Router } from '@angular/router';
+import { HomeService } from '../services/home';
 
 @Component({
   selector: 'p-home',
@@ -10,14 +11,23 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private produtoService:ProdutoService,
+    private produtoService: ProdutoService,
     private router: Router,
+    private homeService: HomeService
   ) { }
 
   produtos:[];
+  categorias:[];
 
   ngOnInit() {
+    this.getCategorias();
     this.getProdutos();
+  }
+
+  getCategorias() {
+    this.homeService.getCategorias().subscribe(ret => {
+      this.categorias = ret;
+    })
   }
 
   getProdutos() {

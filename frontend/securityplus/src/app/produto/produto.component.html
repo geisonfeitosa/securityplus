@@ -19,10 +19,13 @@
           <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
           <div class="card-body">
             <h3 class="card-title">{{produto.nome}}</h3>
-            <h4>$24.99</h4>
+            <h4>{{produto.valor | currency:'BRL':'symbol':'0.2-2':'pt'}}</h4>
             <p class="card-text">{{produto.descricao}}</p>
+            <p class="card-text">Categoria: {{produto.categoria.nome}}</p>
+            <!--
             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
             4.0 stars
+            -->
           </div>
         </div>
         <!-- /.card -->
@@ -41,7 +44,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
             <small class="text-muted">Posted by Anonymous on 3/1/17</small>
             <hr>
-            <a href="#" class="btn btn-success">Leave a Review</a>
+            <a href="#" class="btn btn-success">Deixe seu comentário</a>
           </div>
         </div>
         <!-- /.card -->

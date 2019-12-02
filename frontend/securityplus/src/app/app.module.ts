@@ -12,6 +12,11 @@ import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoListComponent } from './produto-list/produto-list.component';
 import { ProdutoService } from './services/produto.service';
 import { HttpClientModule } from '@angular/common/http';
+import {registerLocaleData} from '@angular/common';
+import pt from '@angular/common/locales/pt';
+import { HomeService } from './services/home';
+ 
+registerLocaleData(pt, 'pt');
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [ProdutoService],
+  providers: [
+    ProdutoService,
+    HomeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

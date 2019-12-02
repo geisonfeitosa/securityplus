@@ -19,11 +19,21 @@ public class Produto {
 	
 	private String descricao;
 	
+	@ManyToOne
+	private Categoria categoria;
+	
 	private BigDecimal valor;
 	
 	@ManyToOne
 	private Fornecedor fornecedor;
-	
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 
 	public BigDecimal getValor() {
 		return valor;

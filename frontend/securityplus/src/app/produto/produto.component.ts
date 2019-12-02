@@ -19,7 +19,9 @@ export class ProdutoComponent implements OnInit {
     nome: '',
     descricao: '',
     fabricante: null,
-    classificacao: null
+    classificacao: null,
+    categoria: {nome: ''},
+    valor: Number
   };
 
   ngOnInit() {

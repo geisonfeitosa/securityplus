@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
-export const SERVICE = "http://localhost:8080/securityplus/rest";
+export const SERVICE = environment.apiUrl;
 
 @Injectable()
 export class ProdutoService {

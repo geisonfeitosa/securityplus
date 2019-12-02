@@ -13,7 +13,7 @@ import br.com.securityplus.securityplus.model.Produto;
 
 @RestController
 @RequestMapping("/rest/produto")
-public class produtoRest {
+public class ProdutoRest {
 	
 	@Autowired
 	private ProdutoDao produtoDao;
